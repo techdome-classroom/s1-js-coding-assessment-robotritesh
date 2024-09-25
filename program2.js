@@ -28,7 +28,7 @@ const decodeTheRing = function (s, p) {
       }
   }
 
-  // The answer is whether the entire string s matches the entire pattern p
+  
   return dp[sLen][pLen];
 };
 
