@@ -1,0 +1,37 @@
+const getTotalIsles = function (grid) {
+  if (!grid || grid.length === 0) return 0;
+
+  const rows = grid.length;
+  const cols = grid[0].length;
+  let islandCount = 0;
+
+  // Helper function to perform DFS
+  const dfs = (i, j) => {
+    // Base case: if out of bounds or at a water cell, stop.
+    if (i < 0 || i >= rows || j < 0 || j >= cols || grid[i][j] === 'W') return;
+
+    // Mark the land as 'visited' by converting 'L' to 'W'
+    grid[i][j] = 'W';
+
+    // Explore in all four possible directions (up, down, left, right)
+    dfs(i - 1, j); // up
+    dfs(i + 1, j); // down
+    dfs(i, j - 1); // left
+    dfs(i, j + 1); // right
+  };
+
+  // Loop over each cell in the grid
+  for (let i = 0; i < rows; i++) {
+    for (let j = 0; j < cols; j++) {
+      // Start a DFS if we find an unvisited landmass
+      if (grid[i][j] === 'L') {
+        islandCount++;
+        dfs(i, j); // Explore the entire island
+      }
+    }
+  }
+
+  return islandCount;
+};
+
+module.exports = getTotalIsles;
