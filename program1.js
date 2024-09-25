@@ -10,7 +10,7 @@ const getTotalIsles = function (grid) {
     // Base case: if out of bounds or at a water cell, stop.
     if (i < 0 || i >= rows || j < 0 || j >= cols || grid[i][j] === 'W') return;
 
-    // Mark the land as 'visited' by converting 'L' to 'W'
+    
     grid[i][j] = 'W';
 
    
