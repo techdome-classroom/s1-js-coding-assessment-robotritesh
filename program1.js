@@ -13,8 +13,8 @@ const getTotalIsles = function (grid) {
     // Mark the land as 'visited' by converting 'L' to 'W'
     grid[i][j] = 'W';
 
-    // Explore in all four possible directions (up, down, left, right)
-    dfs(i - 1, j); // up
+   
+    dfs(i - 1, j); 
     dfs(i + 1, j); 
     dfs(i, j - 1); 
     dfs(i, j + 1); 
