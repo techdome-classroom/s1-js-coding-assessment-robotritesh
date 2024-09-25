@@ -26,7 +26,7 @@ const getTotalIsles = function (grid) {
       // Start a DFS if we find an unvisited landmass
       if (grid[i][j] === 'L') {
         islandCount++;
-        dfs(i, j); // Explore the entire island
+        dfs(i, j); 
       }
     }
   }
