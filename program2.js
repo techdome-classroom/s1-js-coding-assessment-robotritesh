@@ -2,7 +2,7 @@ const decodeTheRing = function (s, p) {
   const sLen = s.length;
   const pLen = p.length;
 
-  // Create a 2D DP array
+  
   const dp = Array(sLen + 1).fill(false).map(() => Array(pLen + 1).fill(false));
 
   
