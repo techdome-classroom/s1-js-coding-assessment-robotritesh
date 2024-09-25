@@ -5,7 +5,7 @@ const decodeTheRing = function (s, p) {
   // Create a 2D DP array
   const dp = Array(sLen + 1).fill(false).map(() => Array(pLen + 1).fill(false));
 
-  // Base case: empty pattern and empty string match
+  
   dp[0][0] = true;
 
   
